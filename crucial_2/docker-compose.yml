@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mc:
+    image: itzg/minecraft-server:${IMAGE_TAG:-java8}
+    volumes:
+      # Maps a directory on the host into the container. This way when the container restarts files stick around
+      #- your/path/here:/data
+      - /home/mderemer/container-config/minecraft/minecraft-java-crucial2:/data
+    environment:
+      EULA: "true"
+      TYPE: AUTO_CURSEFORGE
+      CF_API_KEY: your_api_key_here
+      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/crucial-2/files/3861869
+      CF_SERVER_MOD: /modpacks/SIMPLE-SERVER-FILES-0.3.20.zip
+      CF_EXCLUDE_MODS: "440465, 401648"
+      MEMORY: 4G
+    ports:
+      - "25565:25565"
