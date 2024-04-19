@@ -5,7 +5,7 @@
 1) Create a curseforge account and login
 2) Open a tab to https://console.curseforge.com and get an api key
 3) Update the api key in the docker compose to your value (IMPORTANT: Place an additional $ before any existing $ in the key. ie $ becomes $$)
-4) Modify volume path to map a container host directory to the data directory within the container
+4) Modify volume path to map a container host directory to the data directory within the container. You want your data stored on a host volume to prevent restarts from wiping your world data.
 5) Start the container. It will generate a file that contains the list of things it couldn't download (Some mods have restrictions that don't allow dl)
 6) Manually Move Mirabilis jar to mods folder in container using winscp(windows) or scp(mac/linux) // I should be able to script this in the future as part of the docker compose
 7) Restart container so it picks up that mod it couldn't dl
