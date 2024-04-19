@@ -18,6 +18,6 @@ Notes: The exclusions in the docker compose remove client side mods from getting
 # Client side. 
 1) In the windows xbox minecraft launcher i installed the older flavor of minecraft 1.16.5.
 2) Opened overwolf and installed crucial 2.
-3) Opened minecraft launcher and launched the crucial 2.
+3) Opened minecraft launcher and launched the crucial 2 (2.4.4).
 4) Clicked multiplayer and entered in the local ip of my container host 192.168.1.?
 5) Enjoy
